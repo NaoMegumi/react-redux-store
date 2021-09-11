@@ -17,17 +17,17 @@ function App() {
     <Router>
       <NavBar />
       <Switch>
-        <Route path='/' exact component={Home} />
-        <Route path='/home' exact component={Home} />
-        <Route path='/shop' component={Shop} />
-        <Route path='/cart' component={Cart} />
-        <Route path='/shirt' component={Shirt} />
-        <Route path='/mug' component={Mug} />
-        <Route path='/mouse' component={Mouse} />
-        <Route path='/mask' component={Mask} />
-        <Route path='/shoe' component={Shoe} />
-        <Route path='/checkout' component={Checkout} />
-        <Route path='/confirmation' component={Confirmation} />
+        <Route path='/react-redux-store/' exact component={Home} />
+        <Route path='/react-redux-store/home' exact component={Home} />
+        <Route path='/react-redux-store/shop' component={Shop} />
+        <Route path='/react-redux-store/cart' component={Cart} />
+        <Route path='/react-redux-store/shirt' component={Shirt} />
+        <Route path='/react-redux-store/mug' component={Mug} />
+        <Route path='/react-redux-store/mouse' component={Mouse} />
+        <Route path='/react-redux-store/mask' component={Mask} />
+        <Route path='/react-redux-store/shoe' component={Shoe} />
+        <Route path='/react-redux-store/checkout' component={Checkout} />
+        <Route path='/react-redux-store/confirmation' component={Confirmation} />
       </Switch>
     </Router>
   );

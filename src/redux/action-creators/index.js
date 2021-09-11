@@ -7,11 +7,20 @@ export const addCart = (item) => {
     }
 }
 
-export const removeCart = (item) => {
+export const removeFromCart = (index) => {
     return (dispatch) => {
         dispatch({
             type: "removeFromCart",
-            payload: item
+            payload: index
+        })
+    }
+}
+
+export const emptyCart = () => {
+    return (dispatch) => {
+        dispatch({
+            type: "emptyCart",
+            payload: ""
         })
     }
 }

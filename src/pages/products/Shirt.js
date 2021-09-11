@@ -11,17 +11,65 @@ import { Form } from 'react-bootstrap';
 import InputGroup from 'react-bootstrap/InputGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import Button from 'react-bootstrap/Button';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const Shirt = () =>{
   const [quantity, setQuantity] = useState(0);
-  const [size, setSize] = useState("");
+  const [size, setSize] = useState("S");
 
   const handleInput = event => {
     let intValue = parseInt(event.target.value);
-    if(!isNaN(intValue) && intValue > 0) {
+    if(!isNaN(intValue)) {
       setQuantity(intValue);  
     }
   };
+
+
+  const notify = (message) => { 
+    let cartCount = 0;
+    for (let i = 0; i < state.cart.items.length; i++) {
+      if (state.cart.items[i].item === "Chris Shirt(Size: "+ size +")") {
+        cartCount = state.cart.items[i].quantity;
+        if (cartCount >= 100) {
+          toast.error("Error: Out of stock.");
+          return;
+        }
+      }
+    }
+    if (message > 100) {
+      toast.info("Only " + (100-cartCount) + " in stock.");
+    }
+    else if (message > 1) {
+      if ((message + cartCount) > 100) {
+        toast.info("Only " + (100-cartCount) + " in stock.");
+        return;
+      }
+      addCart({itemName: "Chris Shirt(Size: " + size + ")", quantity: message, price: 8999.99})
+      toast.success("Added " + quantity + " Chris Shirts (Size: " + size + ") to the cart", {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+    }
+    else if (message === 1) {
+      addCart({itemName: "Chris Shirt(Size: " + size + ")", quantity: message, price: 8999.99})
+      toast.success("Added 1 Chris Shirt (Size: " + size + ") to the cart", {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+    }
+  }
+
 
   const handleChange = event => {
     setSize(event.target.value);
@@ -55,7 +103,6 @@ const Shirt = () =>{
         <Col className="mb-3 text-center">
             <Form.Label className="mb-3">Price: $8999.99</Form.Label>
             <FormControl onChange={handleChange} className="mb-3" as="select" aria-label="Default select example">
-                <option>Select Size</option>
                 <option value="S">Small</option>
                 <option value="M">Medium</option>
                 <option value="L">Large</option>
@@ -66,9 +113,20 @@ const Shirt = () =>{
                 <InputGroup.Text>Quantity: </InputGroup.Text>
                 <FormControl onChange={handleInput} type="number" min="1"/>
             </InputGroup>    
-            <Button variant='success' onClick={() => addCart({itemName: "Chris Shirt (" + size + ")", quantity: quantity, price: 8999.99})}>ADD TO CART</Button>
+            <Button variant='success' onClick={() => { notify(quantity);}}>ADD TO CART</Button>
           </Col>
           <Col>
+          <ToastContainer
+          position="top-right"
+          autoClose={2500}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          />      
           </Col>
         </Row>
       </Container>

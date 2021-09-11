@@ -1,16 +1,11 @@
-import React, { useState } from 'react';
-import { useSelector, useDispatch } from "react-redux"
-import { bindActionCreators } from "redux"
-import {actionCreators } from "./../redux/index"
-import {  Link } from "react-router-dom";
+import React from 'react';
+import { useSelector } from "react-redux"
 import { Container, Form, Button, Card } from "react-bootstrap";
 import { LinkContainer } from 'react-router-bootstrap'
 
 const Checkout = () =>{
-  const [quantity, setQuantity] = useState(0);
   const state = useSelector((state) => state);
-  const dispatch = useDispatch()
-  const { addCart } = bindActionCreators(actionCreators, dispatch)
+  
   return (
     <div>
       <div>
@@ -67,7 +62,7 @@ const Checkout = () =>{
               </Card.Text>
         </Card.Body>
         </Card>
-        <LinkContainer to="/confirmation">
+        <LinkContainer to="/react-redux-store/confirmation">
             <Button>Confirm Purchase</Button>
         </LinkContainer>
         <br></br>

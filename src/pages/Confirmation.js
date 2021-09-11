@@ -1,7 +1,14 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import { useDispatch } from "react-redux"
+import { bindActionCreators } from "redux"
+import {actionCreators } from "./../redux/index"
+
 
 const Confirmation = () =>{
+  const dispatch = useDispatch()
+  const { emptyCart } = bindActionCreators(actionCreators, dispatch)
+  emptyCart();
   return (
     <div>
       <Container>

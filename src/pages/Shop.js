@@ -4,8 +4,6 @@ import chrisCoffee from './../images/chris-coffee.png';
 import chrisMouse from './../images/chris-mouse.png';
 import adidasChris from './../images/adidas_x_chris.png'; 
 import maskChris from './../images/chris_mask.png'; 
-import { Link } from "react-router-dom";
-import Image from 'react-bootstrap/Image';
 import { Container, Card, Col, Row, Button } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap'
 
@@ -26,7 +24,7 @@ const Shop = () =>{
               <Card.Text>
                 Limited edition. While supplies last. 
               </Card.Text>
-              <LinkContainer to="/shirt">
+              <LinkContainer to="/react-redux-store/shirt">
                 <Button size="lg">Purchase</Button>
               </LinkContainer>
             </Card.Body>
@@ -42,7 +40,7 @@ const Shop = () =>{
               <Card.Text>
                 Enjoy your morning coffee in style. Supports chai too!
               </Card.Text>
-              <LinkContainer to="/mug">
+              <LinkContainer to="/react-redux-store/mug">
                 <Button size="lg">Purchase</Button>
               </LinkContainer>
             </Card.Body>
@@ -60,7 +58,7 @@ const Shop = () =>{
               <Card.Text>
                 All of the pro gamers have one. 
               </Card.Text>
-              <LinkContainer to="/mouse">
+              <LinkContainer to="/react-redux-store/mouse">
                 <Button size="lg">Purchase</Button>
               </LinkContainer>
             </Card.Body>
@@ -76,7 +74,7 @@ const Shop = () =>{
               <Card.Text>
                 1 of 1 super rare 🔥🔥🔥
               </Card.Text>
-              <LinkContainer to="/shoe">
+              <LinkContainer to="/react-redux-store/shoe">
                 <Button size="lg">Purchase</Button>
               </LinkContainer>
             </Card.Body>
@@ -94,7 +92,7 @@ const Shop = () =>{
               <Card.Text>
                 Pack of 3 Chris masks. 
               </Card.Text>
-              <LinkContainer to="/mask">
+              <LinkContainer to="/react-redux-store/mask">
                 <Button size="lg">Purchase</Button>
               </LinkContainer>
             </Card.Body>

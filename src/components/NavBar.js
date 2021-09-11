@@ -1,6 +1,5 @@
 import React from 'react';
-import {  Link } from "react-router-dom";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import {LinkContainer} from 'react-router-bootstrap'
 
 const NavBar= () =>{
@@ -12,13 +11,13 @@ const NavBar= () =>{
   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
   <Navbar.Collapse id="responsive-navbar-nav">
     <Nav className="me-auto">
-      <LinkContainer to="/home">
+      <LinkContainer to="/react-redux-store/home">
         <Nav.Link>Home</Nav.Link>
       </LinkContainer>
-      <LinkContainer to="/shop">
+      <LinkContainer to="/react-redux-store/shop">
         <Nav.Link>Shop</Nav.Link>
       </LinkContainer>
-      <LinkContainer to="/cart">
+      <LinkContainer to="/react-redux-store/cart">
         <Nav.Link>Cart</Nav.Link>
       </LinkContainer>
     </Nav>
