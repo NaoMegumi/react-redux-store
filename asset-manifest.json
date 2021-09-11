@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/react-redux-store/static/css/main.5a9b8d39.chunk.css",
+    "main.js": "/react-redux-store/static/js/main.ea0f9acc.chunk.js",
+    "main.js.map": "/react-redux-store/static/js/main.ea0f9acc.chunk.js.map",
+    "runtime-main.js": "/react-redux-store/static/js/runtime-main.74f1ae2e.js",
+    "runtime-main.js.map": "/react-redux-store/static/js/runtime-main.74f1ae2e.js.map",
+    "static/css/2.e9478c6c.chunk.css": "/react-redux-store/static/css/2.e9478c6c.chunk.css",
+    "static/js/2.b95d5ce6.chunk.js": "/react-redux-store/static/js/2.b95d5ce6.chunk.js",
+    "static/js/2.b95d5ce6.chunk.js.map": "/react-redux-store/static/js/2.b95d5ce6.chunk.js.map",
+    "index.html": "/react-redux-store/index.html",
+    "static/css/2.e9478c6c.chunk.css.map": "/react-redux-store/static/css/2.e9478c6c.chunk.css.map",
+    "static/css/main.5a9b8d39.chunk.css.map": "/react-redux-store/static/css/main.5a9b8d39.chunk.css.map",
+    "static/js/2.b95d5ce6.chunk.js.LICENSE.txt": "/react-redux-store/static/js/2.b95d5ce6.chunk.js.LICENSE.txt",
+    "static/media/adidas_x_chris.9d9f89f9.png": "/react-redux-store/static/media/adidas_x_chris.9d9f89f9.png",
+    "static/media/chris-coffee.474486b3.png": "/react-redux-store/static/media/chris-coffee.474486b3.png",
+    "static/media/chris-mouse.00429df2.png": "/react-redux-store/static/media/chris-mouse.00429df2.png",
+    "static/media/chris-tee.adcb477f.png": "/react-redux-store/static/media/chris-tee.adcb477f.png",
+    "static/media/chris.0a6f0255.jpg": "/react-redux-store/static/media/chris.0a6f0255.jpg",
+    "static/media/chris_mask.c224f404.png": "/react-redux-store/static/media/chris_mask.c224f404.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.74f1ae2e.js",
+    "static/css/2.e9478c6c.chunk.css",
+    "static/js/2.b95d5ce6.chunk.js",
+    "static/css/main.5a9b8d39.chunk.css",
+    "static/js/main.ea0f9acc.chunk.js"
+  ]
+}
